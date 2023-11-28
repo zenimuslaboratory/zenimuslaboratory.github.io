@@ -1,0 +1,227 @@
+<html>
+    <head>
+        <title>Commission Zenimus</title>
+        <link href="css/styles.css" type="text/css" rel="stylesheet" />
+        <script type="text/javascript" src="form_price_calc.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1><img src="Images/Logo.png" width="65" height="65"> Zenimus's Laboratory</h1>
+            <hr />
+            <div id="nav">
+                <ul>
+                    <li><a href="index.html"><b>* Homepage *</b></a></li>
+                    <li><a href="https://docs.google.com/document/d/1002XsaX6giZrD8_QGgoh0lCLgIPit3uBiKbvAevxD4M/edit"><b>Terms of Service</b></a></li>
+                    <li><a href="prices.html"><b>Prices/Examples</b></a></li>
+                    <li><a href="https://trello.com/b/s2sWJ1Za/queue"><b>Commission Que</b></a></li>
+                    <li><a href="commissionRequest.html"><b>Commission Me</b></a></li>
+                </ul>
+            </div>
+        </header>
+        <hr />
+        <h2>Commission Request Forms</h2>
+        <!--Price Calculation Forms (Tables)-->
+        <!--Use <select> if choosing to use a dropdown menu to show a selected form-->
+        <!--Commission Form 1- Avatar Retextures, Quest and PC-->
+        <form name="avatarRetexturesForm" method="post" action="mailto:id50hx96@ubalt.edu" onchange="aRcalculatePrice()">
+            <legend><u><b>Avatar Retextures</b></u></legend>
+            <p>*Required</p>
+            <input type="hidden" name="RequestType" value="Avatar Retextures">
+            <fieldset>
+                <legend>Avatar Details</legend>
+                <input type="hidden" id="basePrice" name="basePrice" value="40">
+                <input type="checkbox" id="quest" name="Quest_Compatability" value="Yes" class="ARForm">
+                <label for="quest">Quest Compatability</label>
+                <br>
+                <input type="checkbox" id="design" name="Complex_Design" value="Yes" class="ARForm">
+                <label for="design">Complex Designs</label>
+            </fieldset>
+            <fieldset>
+                <legend>Add-ons</legend>
+                <input type="checkbox" id="o/a" name="outfits/Accessories" value="Yes" class="ARForm">
+                <label for="o/a"> >Two Outfits/Accessories</label>
+                <br>
+                <input type="checkbox" id="g/a" name="GoGoorAnimations" value="Yes" class="ARForm">
+                <label for="g/a">GoGo or Animation Set-Ups</label>
+                <br>
+                <input type="checkbox" id="NSFW" name="NSFW" value="Yes" class="ARForm">
+                <label for="NSFW">NSFW</label>
+                <br>
+                <label for="materialSwaps">Material Swaps:</label>
+                <select name="MaterialSwaps" id="materialSwaps">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+                <br>
+                <label for="CCW">Color Change Wheels:</label>
+                <select name="ColorChangeWheels:" id="CCW">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend><u>Commission Cost</u></legend>
+                <label for="ARtotalPrice">Total:</label>
+                <input type="text" id="ARtotalPrice" name="ARtotalPrice" value="$40" readonly>
+            </fieldset>
+            <fieldset>
+                <legend>*<u>Requester Info</u>*</legend>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+                <br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+                <br>
+            </fieldset>
+            <div class="submit"><input type="submit" value="Submit Request" /></div>
+        </form>
+        <br>
+        <hr/>
+        <br>
+        <!--Commission Form 2 - Avatar Fixes-->
+        <div id="form2">
+        <form name="avatarfixesform" method="post" action="mailto:id50hx96@ubalt.edu">
+            <legend><u><b>Avatar Assistance</b></u></legend>
+            <p style="color: #9d00ff">*Required</p>
+            <input type="hidden" name="RequestType" value="Avatar Assistance">
+            <fieldset>
+                <legend>Request Type</legend>
+                <label for="helpType">I need:</label>
+                <select name="helpType" id="helpType">
+                    <option value="Model/Texture Fixes">Model/Texture Fixes</option>
+                    <option value="Tutorials">Tutorials</option>
+                    <option value="Avatar Help">Avatar Help</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>Request Description</legend>
+                <textarea id="Description" name="Description" rows="5" cols="37" maxlength="500"></textarea>
+            </fieldset>
+            <fieldset>
+                <legend><u>Commission Cost</u></legend>
+                <label for="AFtotalPrice">Total:</label>
+                <input type="text" id="AFtotalPrice" name="AFtotalPrice" value="$30" readonly>
+            </fieldset>
+            <fieldset>
+                <legend>*<u>Requester Info</u>*</legend>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+                <br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+                <br>
+            </fieldset>
+            <div class="submit"><input type="submit" value="Submit Request" /></div>
+        </form>
+        </div>
+        <br>
+        <hr/>
+        <br>
+        <!--Commission Form 3 - Blender Renders, SFW and NSFW-->
+        <form name="blenderRendersForm" method="post" action="mailto:id50hx96@ubalt.edu" onchange="bRcalculatePrice()">
+            <legend><u><b>Blender Renders</b></u></legend>
+            <input type="hidden" name="RequestType" value="Blender Renders">
+            <fieldset>
+                <legend>Render Type</legend>
+                <input type="checkbox" id="YCH" name="YCHrender" value="Yes">
+                <label for="YCH">YCH Render</label>
+                <br>
+                <input type="checkbox" id="custom" name="customRender" value="Yes">
+                <label for="custom">Custom Render</label>
+            </fieldset>
+            <fieldset>
+                <legend>Request Details</legend>
+                <label for="extraCharacters">Extra Characters:</label>
+                <select name="Extra Characters" id="extraCharacters">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+                <br>
+                <input type="checkbox" id="NSFW" name="NSFW" value="Yes">
+                <label for="NSFW">NSFW</label>
+                <br>
+            </fieldset>
+            <fieldset>
+                <legend>Request Description</legend>
+                <textarea id="Description" name="Description" rows="4" cols="37" maxlength="500"></textarea>
+            </fieldset>
+            <fieldset>
+                <legend><u>Commission Cost</u></legend>
+                <label for="BRtotalPrice">Total:</label>
+                <input type="text" id="BRtotalPrice" name="BRtotalPrice" value="$0" readonly>
+            </fieldset>
+            <fieldset>
+                <legend>*<u>Requester Info</u>*</legend>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" maxlength="50">
+                <br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+                <br>
+            </fieldset>
+            <div class="submit"><input type="submit" value="Submit Request" /></div>
+        </form>
+        <br>
+        <hr/>
+        <br>
+        <!--Commission Form 4 - Video Editing, Tiktok-->
+        <div id="form2">
+        <form name="videoEditingForm" method="post" action="mailto:id50hx96@ubalt.edu" onchange="vEcalculatePrice()">
+            <legend><u><b>Video Editing</b></u></legend>
+            <p style="color: #9d00ff">*Required</p>
+            <input type="hidden" name="RequestType" value="Video Editing">
+            <fieldset>
+                <legend>Platform*</legend>
+                <input type="checkbox" id="tiktok" name="tiktok" value="TikTok">
+                <label for="tiktok">TikTok</label>
+                <br>
+                <input type="checkbox" id="yt" name="yt" value="YouTube">
+                <label for="yt">YouTube</label>
+            </fieldset>
+            <fieldset>
+                <legend>Hours</legend>
+                <label for="hours">Hours of Raw Video:</label>
+                <select name="Hours" id="hours">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                <br>
+            </fieldset>
+            <fieldset>
+                <legend>Request Description</legend>
+                <textarea id="Description" name="Description" rows="4" cols="37" maxlength="500"></textarea>
+            </fieldset>
+            <fieldset>
+                <legend><u>Commission Cost</u></legend>
+                <label for="VEtotalPrice">Total:</label>
+                <input type="text" id="VEtotalPrice" name="VEtotalPrice" value="$15" readonly>
+            </fieldset>
+            <fieldset>
+                <legend>*<u>Requester Info</u>*</legend>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" maxlength="50">
+                <br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+                <br>
+            </fieldset>
+            <div class="submit"><input type="submit" value="Submit Request" /></div>
+        </form>
+        </div>
+        <br>
+    </body>
+</html>

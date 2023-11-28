@@ -1,0 +1,198 @@
+/*Color codes:
+Red: #ff0000
+Gray: rgb(80, 78, 78)
+RG text shadow: #242424
+Purple: #9d00ff 
+White: #ffffff
+PW text shadow: #aaa9a9 .1em .1em .1em;
+Bold pw text shadow: #cacaca .1em .1em .1em;
+Off-Black: rgb(24, 24, 24)
+Gradient: background: linear-gradient(to right,#9d00ff,#ff0000);
+*/
+*{
+    font-family: 'Times New Roman', Times, serif;
+}
+body {
+    margin: 2% 5%;
+    background-color: #242424;
+    color: #ffffff;
+}
+body a:link {
+    color: #ff0000;
+}
+body a:visited{
+    color: #ff0000;
+}
+header, footer {
+    text-align: center;
+}
+header {
+    background-repeat:repeat-x;
+}
+#nav ul {
+    list-style-type: none;
+}
+#nav li {
+    display: inline-block;
+    margin: 1em 5px;
+    width: 12em;
+}
+#nav a:link {
+    text-align:center;
+    padding:.5em 1em;
+    background-color: #ffffff;
+    color: #9d00ff;
+    text-decoration:none;
+    border: 2px solid rgb(80, 78, 78);
+    border-radius: 6px;
+    text-shadow: #cacaca .1em .1em .1em;
+    box-shadow: rgba(0,0,0,.5) 0 5px 3px;
+    font-size: larger;
+}
+#nav a:visited {
+    background-color: #ffffff;
+    border: 2px solid rgb(80, 78, 78);
+    color:  #9d00ff;
+    box-shadow: 0 1px 2px rgba(0,0,0,.5);
+}
+#nav a:hover {
+    background-color: rgb(80, 78, 78);
+    border-color: rgb(80, 78, 78);
+    color: #ff0000;
+    text-shadow: #242424 .1em .1em .1em;
+}
+#nav a:active {
+    box-shadow: 0 1px 2px rgba(0,0,0,.5);
+    top: 3px;
+}
+#clear, hr {
+    clear:left;
+}
+#def {
+    text-indent: .5em;
+}
+h1 {
+    text-align: left;
+}
+h1 img {
+    vertical-align: middle;
+}
+h2 {
+    text-align:center;
+    color: #ff0000;
+    text-decoration: underline;
+}
+h3{
+    text-align: center;
+    text-decoration: underline;
+}
+h4{
+    text-decoration: underline;
+    font-size: large;
+}
+p, table {
+    text-align:center;
+}
+table{
+    font-size: large;
+    width: 300px;
+}
+th {
+    background-color: #ffffff;
+    color: black;
+}
+td:nth-child(odd) {
+    background-color: #ffffff;
+    color: #9d00ff;
+    width: 125px;
+}
+td:nth-child(even) {
+    background-color: rgb(80, 78, 78);
+    color: #ff0000;
+    width: 125px;
+}
+.left {
+    float: left;
+    width: 650px;
+    text-align:center;
+}
+.right {
+    float: left;
+    width: 650px;
+    text-align:center;
+}
+form {
+    margin: auto;
+    border: 1px solid #9d00ff;
+    background-color: #ffffff;
+    color: #9d00ff;
+    width: 300px;
+    font-size: large;
+}
+form p{
+    margin:0%;
+    color: #ff0000;
+    font-size: medium;
+    font-style: italic;
+    text-align: center;
+}
+legend{
+    font-style: italic;
+    color: #9d00ff;
+    text-align: center;
+    
+}
+fieldset { 
+    border: 1px solid rgb(80, 78, 78); 
+    background-color: #ffffff; 
+    line-height: 1.6em;
+}
+input [type="Checkbox"] {
+    color: #9d00ff;
+}
+input[type="submit"], input[type="button"] {
+    background-color: #ffffff;
+    color: #9d00ff;
+    border: 2px solid rgb(80, 78, 78);
+    border-radius: 6px;
+    text-shadow: #cacaca .1em .1em .1em;
+    box-shadow: rgba(0,0,0,.5) 0 3px 3px;
+    font-size: large;
+}
+input[type="submit"]:hover, input[type="button"]:hover {
+    background-color: rgb(80, 78, 78);
+    border-color: rgb(80, 78, 78);
+    color: #ff0000;
+    text-shadow: #242424 .1em .1em .1em;
+}
+input [type="text"] {
+    margin: auto;
+}
+.submit {
+    text-align: center;
+    padding:.5em 1em;
+    font-size: larger;
+}
+#form2 form, #form2 fieldset {
+    background-color:rgb(80, 78, 78); 
+    color: #ff0000; 
+    border: 1px solid #ff0000;
+}
+#form2 legend{
+    color: #ff0000;
+}
+.table1, .table2, .table3, .table4 {
+    width: 300px; 
+    float: left;
+    margin: 1%;
+    margin-bottom: 1em;
+}
+.table4 {
+    margin-right: 0%;
+}
+#ARtotalPrice, #AFtotalPrice, #VEtotalPrice, #BRtotalPrice{
+    font-size: large;
+    font-weight: bold;
+    width: 180px;
+}
+
